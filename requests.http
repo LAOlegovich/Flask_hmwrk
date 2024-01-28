@@ -1,0 +1,56 @@
+# примеры API-запросов
+
+@baseUrl = http://127.0.0.1:5000
+
+
+
+# создание пользователя
+POST {{baseUrl}}/user
+Content-Type: application/json
+
+{
+  "name": "user_3",
+  "password": "1234"
+}
+###
+
+# создание объявления
+POST {{baseUrl}}/sticker
+Content-Type: application/json
+
+{
+  "name": "Declaration #1",
+  "description": "Buy a small car",
+  "owner":1
+}
+###
+
+# обновление объявления
+PATCH {{baseUrl}}/sticker/1
+Content-Type: application/json
+
+{
+  "description": "Buy a small car or bycicle, yeahh"
+}
+###
+
+# создание объявления
+POST {{baseUrl}}/sticker
+Content-Type: application/json
+
+{
+  "name": "Declaration #3",
+  "description": "Sell a computer",
+  "owner":1
+}
+###
+# удаление продукта
+DELETE {{baseUrl}}/sticker/1
+Content-Type: application/json
+
+###
+
+# получение объявления
+GET {{baseUrl}}/sticker/2
+Content-Type: application/json
+
